@@ -31,7 +31,6 @@ namespace Songy
             {
                 var distance = PercentageOfMinimalDistanceToClip ( clip ) / 100;
                 clip.source.volume = 1f - distance;
-                print ( "Volume : " + clip.source.volume );
             }
         }
 
