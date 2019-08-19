@@ -16,7 +16,7 @@ public class GameMaster : MonoBehaviour
     public SongySong songySong;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         songySong.SetLoop ( "BasicBeat", "Bass", "Chords", "Pads", "Arrpegio", "ExtraBeat" );
 
