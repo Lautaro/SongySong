@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GameMaster : MonoBehaviour
 {
-    public float PlayerSpeed;
+  
     public Transform Player;
     public Transform BasicBeat;
     public Transform Bass;
@@ -27,33 +27,15 @@ public class GameMaster : MonoBehaviour
         songySong.SetTrackingObjectOnClip ( "Pads", Pads );
         songySong.SetTrackingObjectOnClip ( "Arrpegio", Arrpegio );
         songySong.SetTrackingObjectOnClip ( "ExtraBeat", ExtraBeat );
+
+        songySong.PlaySongySong();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if ( Input.anyKey )
-        {
-            if ( Input.GetKey(KeyCode.W) )
-            {
-                Player.transform.position += new Vector3 ( 0,PlayerSpeed );
-                
-            }
-
-            if ( Input.GetKey ( KeyCode.S ) )
-            {
-                Player.transform.position += new Vector3 ( 0, -PlayerSpeed);
-            }
-            if ( Input.GetKey ( KeyCode.A ) )
-            {
-                Player.transform.position += new Vector3 (  -PlayerSpeed, 0 );
-            }
-            if ( Input.GetKey ( KeyCode.D ) )
-            {
-                Player.transform.position += new Vector3 (  PlayerSpeed, 0);
-            }
-        }
+       
 
     }
 }
